@@ -18,11 +18,12 @@
       </p>
     </a>
 
-      <a href="{% url 'articleapp:update' pk=target_article.pk %}">
+      <a href="{% url 'articleapp:delete' pk=target_article.pk %}">
       <p>
-          Delete Article
+          Delete
       </p>
     </a>
+      {% include 'commentapp/create.html' with article= target_article %}
   </div>
 </div>
 
